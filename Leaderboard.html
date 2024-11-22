@@ -39,9 +39,10 @@
 <table id="leaderboard">
     <thead>
         <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Score</th>
+            <th>House</th>
+            <th>Individuals</th>
+            <th>House Challenges</th>
+			<th>Total</th>
         </tr>
     </thead>
     <tbody>
@@ -50,9 +51,9 @@
 </table>
 
 <script>
-    const sheetID = 'YOUR_SHEET_ID';
-    const apiKey = 'YOUR_API_KEY';
-    const range = 'Sheet1!A1:C10'; // Adjust the range as needed
+    const sheetID = '16LTmLgRcIcFF3Dcvfn5Ua966M74l2PS88axSz34XTEM';
+    const apiKey = 'AIzaSyDhfwA10UQFRba4NpOUVOXl_SiK6DocW8I';
+    const range = 'Copy of HOUSE LEADERBOARD!E2:H'; // Adjust the range as needed
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
 
     async function fetchLeaderboard() {
@@ -78,7 +79,7 @@
         updateLeaderboard(data);
     }
 
-    setInterval(refreshLeaderboard, 5000); // Refresh every 5 seconds
+    setInterval(refreshLeaderboard, 1000); // Refresh every 5 seconds
     refreshLeaderboard(); // Initial fetch
 </script>
 
