@@ -6,7 +6,7 @@
     <title>Live Leaderboard</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: montserrat, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
@@ -68,7 +68,7 @@
 
         data.forEach((row, index) => {
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${index + 1}</td><td>${row[0]}</td><td>${row[1]}</td>`;
+            tr.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td><td>${row[3]}</td>`;
             tbody.appendChild(tr);
             tr.classList.add('changed'); // Add animation class
         });
@@ -79,7 +79,7 @@
         updateLeaderboard(data);
     }
 
-    setInterval(refreshLeaderboard, 1000); // Refresh every 5 seconds
+    setInterval(refreshLeaderboard, 500); // Refresh every 5 seconds
     refreshLeaderboard(); // Initial fetch
 </script>
 
